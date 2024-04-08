@@ -12,6 +12,7 @@ export default function Home() {
     setRoot(JSON.stringify(global.Tree));
   };
   useEffect(() => {
+    global.Tree = randomTree;
     window.addEventListener("treeUpdate",treeUpdateHandler)
     return () => {
       window.removeEventListener("treeUpdate",treeUpdateHandler)
@@ -24,7 +25,7 @@ export default function Home() {
   return (
     <main className="bg-base-100 ">
       {rootTree}
-      <button onClick={() => {  updateNodeById(randomTree, "l930ka", { isComponent: true, type: "text" ,name:"hii" });} }>update</button>
+      <button onClick={() => {  updateNodeById(global.Tree, "l930ka", { isComponent: true, type: "text" ,name:"hii" });} }>update</button>
     
     </main>
   );
