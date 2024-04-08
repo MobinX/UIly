@@ -6,7 +6,7 @@ export interface Node {
     isComponent: boolean
     children?: Node[]
     text?: string
-    propaties: Propaties
+    propaties?: Propaties
     beforeContent?: Propaties
     afterContent?: Propaties
 }
