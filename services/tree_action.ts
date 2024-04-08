@@ -99,8 +99,16 @@ export function deleteParentNodeByPath(root: Node, path: string[]): Node | undef
         return root;
     }
 }
-
-export function updateNode(root: Node, path: string[], update: Partial<Node>): Node | undefined {
+export function updateNodeById(root: Node, id: string, update: Partial<Node>): Node | undefined {   
+    let currentNode: Node | undefined = getNodeById(root, id);
+    if (currentNode) {
+        Object.assign(currentNode, update);
+        global.Tree = root;
+        window.dispatchEvent(new CustomEvent('treeUpdate', { detail: {tree:root,current:currentNode} }));
+    }
+    return root;
+}
+export function updateNodeByPath(root: Node, path: string[], update: Partial<Node>): Node | undefined {
     let currentNode: Node | undefined = getNodeByPath(root, path);
 
     if (currentNode) {

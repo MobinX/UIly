@@ -1,5 +1,5 @@
 "use client";
-import { createContainerNode, deleteNodeById, deleteNodeByPath, deleteParentNodeById, generateRandomNode, getNodeById, randomTree, updateNode } from "@/services/tree_action";
+import { createContainerNode, deleteNodeById, deleteNodeByPath, deleteParentNodeById, generateRandomNode, getNodeById, randomTree, updateNodeById } from "@/services/tree_action";
 import Image from "next/image";
 import { root } from "postcss";
 import { useEffect ,useState} from "react";
@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className="bg-base-100 ">
       {rootTree}
-      <button onClick={() => {  updateNode(randomTree, ["vj2ixi", "l930ka",], { isComponent: true, type: "text" ,name:"hii" });} }>update</button>
+      <button onClick={() => {  updateNodeById(randomTree, "l930ka", { isComponent: true, type: "text" ,name:"hii" });} }>update</button>
     
     </main>
   );
