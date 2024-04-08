@@ -1,2 +1,1 @@
-# UIly
-Desing and Develop UI with the speed of light just using only KEYBOARD
+## UIly: Create UI with the speed of light using only keyboard
