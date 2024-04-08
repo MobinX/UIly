@@ -11,7 +11,12 @@ export interface Node {
     afterContent?: Propaties
 }
 
-export interface Propaties{
+export interface NodeEvent {
+    tree: Node
+    current: Node
+}
+
+export interface Propaties {
     //dimentions
     basis?: TailwindNumValues | TailwindFractionValues | "full" | string
     grow?: boolean
