@@ -6,9 +6,9 @@ export interface Node {
     isComponent: boolean
     children?: Node[]
     text?: string
-    propaties?: Propaties
-    beforeContent?: Propaties
-    afterContent?: Propaties
+    propeties?: Propeties
+    beforeContent?: Propeties
+    afterContent?: Propeties
 }
 
 export interface NodeEvent {
@@ -16,7 +16,7 @@ export interface NodeEvent {
     current: Node
 }
 
-export interface Propaties {
+export interface Propeties {
     //dimentions
     basis?: TailwindNumValues | TailwindFractionValues | "full" | string
     grow?: boolean
@@ -61,48 +61,46 @@ export type TailwindRangeValues = "0" | "50" | "75" | "90" | "95" | "100" | "105
 
 //export interface for tailwind width
 export interface Width {
-    w: TailwindNumValues | TailwindFractionValues | TailwindStrValues | string
+    w?: TailwindNumValues | TailwindFractionValues | TailwindStrValues | string
     max_w?: TailwindNumValues | TailwindFractionValues | TailwindStrValues | string
     min_w?: TailwindNumValues | TailwindFractionValues | TailwindStrValues | string
 }
 
 //export interface for tailwind height
 export interface Height {
-    h: TailwindNumValues | TailwindFractionValues | TailwindStrValues | string
+    h?: TailwindNumValues | TailwindFractionValues | TailwindStrValues | string
     max_h?: TailwindNumValues | TailwindFractionValues | TailwindStrValues | string
     min_h?: TailwindNumValues | TailwindFractionValues | TailwindStrValues | string
 }
 
 //export interface for tailwind padding
 export interface Padding {
-    p: {
-        all?: TailwindNumValues | string
-        x?: TailwindNumValues | string
-        y?: TailwindNumValues | string
-        l?: TailwindNumValues | string
-        r?: TailwindNumValues | string
-        t?: TailwindNumValues | string
-        b?: TailwindNumValues | string
-    }
+
+    x?: TailwindNumValues | string
+    y?: TailwindNumValues | string
+    l?: TailwindNumValues | string
+    r?: TailwindNumValues | string
+    t?: TailwindNumValues | string
+    b?: TailwindNumValues | string
+
 }
 //export interface for tailwind margin
 export interface Margin {
-    m: {
-        all?: TailwindNumValues | string
-        x?: TailwindNumValues | string
-        y?: TailwindNumValues | string
-        l?: TailwindNumValues | string
-        r?: TailwindNumValues | string
-        t?: TailwindNumValues | string
-        b?: TailwindNumValues | string
-    }
+
+    x?: TailwindNumValues | string
+    y?: TailwindNumValues | string
+    l?: TailwindNumValues | string
+    r?: TailwindNumValues | string
+    t?: TailwindNumValues | string
+    b?: TailwindNumValues | string
+
 }
 //export interface for tailwind space between 
 export interface SpaceBetween {
-    gap: {
-        x?: TailwindNumValues | string
-        y?: TailwindNumValues | string
-    }
+
+    x?: TailwindNumValues | string
+    y?: TailwindNumValues | string
+
 }
 
 //export interface for tailwind color
@@ -158,7 +156,7 @@ export interface Background {
 
 //export interface for tailwind border
 export interface Border {
-    border: {
+
         color?: TailwindColor | string
         width?: {
             x?: "2" | "4" | "8" | "0" | string
@@ -180,7 +178,7 @@ export interface Border {
             l: TailwindRelativeValue | string | "raw"
 
         }
-    }
+    
 }
 //export interface for tailwind shadow
 export interface Shadow {

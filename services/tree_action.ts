@@ -1,4 +1,4 @@
-import { Node, Propaties } from '@/interfaces/ui_tree';
+import { Node, Propeties } from '@/interfaces/ui_tree';
 
 export function getNodeById(root: Node, id: string): Node | undefined {
     if (root.id === id) {
@@ -190,12 +190,12 @@ export function generateRandomNode(depth: number, paths: string[] = []): Node {
     }
 
     if (Math.random() < 0.5) {
-        node.propaties = generateRandomProperties();
+        node.propeties = generateRandomProperties();
     }
 
     return node;
 }
-function generateRandomProperties(): Propaties {
+function generateRandomProperties(): Propeties {
     return {}
 }
 

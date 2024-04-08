@@ -43,7 +43,7 @@ export const TailwindHeight = {
 };
 
 export const TailwindPadding = {
-    p: {
+
         all: TailwindNumValues,
         x: TailwindNumValues,
         y: TailwindNumValues,
@@ -51,11 +51,11 @@ export const TailwindPadding = {
         r: TailwindNumValues,
         t: TailwindNumValues,
         b: TailwindNumValues
-    }
+    
 };
 
 export const TailwindMargin = {
-    m: {
+
         all: TailwindNumValues,
         x: TailwindNumValues,
         y: TailwindNumValues,
@@ -63,14 +63,14 @@ export const TailwindMargin = {
         r: TailwindNumValues,
         t: TailwindNumValues,
         b: TailwindNumValues
-    }
+    
 };
 
 export const TailwindSpaceBetween = {
-    gap: {
+
         x: TailwindNumValues,
         y: TailwindNumValues
-    }
+   
 };
 
 export const TailwindBackground = {
@@ -94,7 +94,7 @@ export const TailwindBackground = {
 };
 
 export const TailwindBorder = {
-    border: {
+
         color: TailwindColor,
         width: {
             x: ['2', '4', '8', '0'],
@@ -111,7 +111,7 @@ export const TailwindBorder = {
             br: TailwindRelativeValue.concat(['raw']),
             bl: TailwindRelativeValue.concat(['raw'])
         }
-    }
+    
 };
 
 export const TailwindShadow = {
