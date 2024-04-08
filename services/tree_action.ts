@@ -68,7 +68,7 @@ export function deleteNodeById(root: Node, id: string): Node | undefined {
         let parentNode: Node | undefined = getNodeByPath(root, parentPath);
         if (parentNode) {
             let newChildren = parentNode.children?.filter(node => node.id !== id);
-            updateNode(root, parentPath, { children: newChildren });
+            updateNodeByPath(root, parentPath, { children: newChildren });
         }
     }
     return root;
@@ -80,7 +80,7 @@ export function deleteNodeByPath(root: Node, path: string[]): Node | undefined {
         let parentNode: Node | undefined = getNodeByPath(root, parentPath);
         if (parentNode) {
             let newChildren = parentNode.children?.filter(node => node.id !== path[path.length - 1]);
-            updateNode(root, parentPath, { children: newChildren });
+            updateNodeByPath(root, parentPath, { children: newChildren });
         }
     }
     return root;
@@ -134,7 +134,7 @@ export function createContainerNode(root: Node, path: string[] = [], name: strin
         });
         //update the tree
 
-        updateNode(root, path, { children: prevChildren });
+        updateNodeByPath(root, path, { children: prevChildren });
         return root;
     }
 }
@@ -155,7 +155,7 @@ export function createTextNode(root: Node, path: string[] = [], text: string, is
         });
         //update the tree
 
-        updateNode(root, path, { children: prevChildren });
+        updateNodeByPath(root, path, { children: prevChildren });
         return root;
     }
 }
